@@ -16,6 +16,7 @@ builder.Services.AddSwaggerGen();
 
 //Repositories
 builder.Services.AddScoped<ICategory, CategoryRepository>();
+builder.Services.AddScoped<IMovie, MovieRepository>();
 
 //AutoMapper
 builder.Services.AddAutoMapper(typeof(MapperMovies));
@@ -35,4 +36,4 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-Sapp.Run();
+app.Run();
